@@ -89,3 +89,10 @@ resource "aws_instance" "my_instance"{
 
 }
 
+resource "aws_instance" "import_instance"{
+
+	ami = "unknowm"
+	instance_type = "unknown"
+
+
+}
