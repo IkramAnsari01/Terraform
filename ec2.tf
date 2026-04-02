@@ -4,6 +4,11 @@ resource "aws_key_pair" "aws-key"{
 	key_name = "Terraform-Key"
 	public_key = file("newKey.pub")
 
+	tags = {
+		Name = "Terraform-Key"
+		Environment = var.env
+	}
+
 }
 
 # VPC
@@ -56,6 +61,10 @@ resource aws_security_group my-security-grp{
 
 	}
 
+	tags = {
+		Name = "Terra_security_grp"
+		Environment = var.env
+	}
 
 
 
