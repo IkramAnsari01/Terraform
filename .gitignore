@@ -5,3 +5,4 @@
 *.pem
 newKey
 newKey.pub
+.terraform.lock.hcl
