@@ -68,6 +68,7 @@ resource "aws_instance" "my_instance"{
 	for_each = tomap({
 		"Terra_Instance_micro" : "t3.micro",
 		"Terra_Instance_small" : "t3.small"
+		"Terra_Instance_small3" : "t3.small"
 	})
 
 	key_name = aws_key_pair.aws-key.key_name
@@ -88,11 +89,4 @@ resource "aws_instance" "my_instance"{
 
 
 }
-
-resource "aws_instance" "import_instance"{
-
-	ami = "unknowm"
-	instance_type = "unknown"
-
-
-}
+	

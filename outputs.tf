@@ -13,21 +13,21 @@
 
 output "ec2_public_ip" {
   value = {
-    for key, inst in aws_instance.my_instance :
-    key => inst.public_ip
+    for key, value in aws_instance.my_instance :
+    key => value.public_ip
   }
 }
 
 output "ec2_private_ip" {
   value = {
-    for key, inst in aws_instance.my_instance :
-    key => inst.private_ip
+    for key, value in aws_instance.my_instance :
+    key => value.private_ip
   }
 }
 
 output "ec2_public_dns" {
   value = {
-    for key, inst in aws_instance.my_instance :
-    key => inst.public_dns
+    for key, value in aws_instance.my_instance :
+    key => value.public_dns
   }
 }
