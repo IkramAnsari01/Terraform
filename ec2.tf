@@ -1,11 +1,11 @@
 # Key pair Generation
 
 resource "aws_key_pair" "aws-key"{
-	key_name = "Terraform-Key"
+	key_name = "${var.env}-Terraform-Key"
 	public_key = file("newKey.pub")
 
 	tags = {
-		Name = "Terraform-Key"
+		Name = "${var.env}-Terraform-Key"
 		Environment = var.env
 	}
 
