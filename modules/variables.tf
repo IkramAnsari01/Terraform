@@ -33,3 +33,7 @@ variable "lock_table_name"{
 variable "aws_region"{
     type = string
 }
+
+variable "workspace"{
+    type = string
+}

@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "terraform_lock" {
-  name         = "modular-${var.lock_table_name}"
+  name         = "modular-terraform-lock-table"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 
@@ -9,6 +9,6 @@ resource "aws_dynamodb_table" "terraform_lock" {
   }
 
   tags = {
-    Name = var.lock_table_name
+    Name = "modular-terraform-lock-table"
   }
 }
