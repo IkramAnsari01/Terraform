@@ -6,12 +6,12 @@ terraform {
     }
   }
 
-  #backend "s3" {
-   # bucket         = "modular-dev-terraform-bucket"
-   # key            = "terraform.tfstate"
-   # region         = "ap-south-1"
-   # dynamodb_table = "modular-terraform-lock-table"
-   # encrypt        = true
-  #}
+  backend "s3" {
+   bucket         = "common-terraform-bucket"
+   key            = "terraform.tfstate"
+   region         = "ap-south-1"
+   dynamodb_table = "modular-terraform-lock-table"
+   encrypt        = true
+  }
   
 }
